@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  cellbase:
+  - apiVersion: v2
+    appVersion: 5.0.0-SNAPSHOT
+    created: "2022-05-05T23:22:17.18354773+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 35c3fcea2b6ab64bd766ca71d84547d09f6945a36707def854646e754736e115
+    name: cellbase
+    type: application
+    urls:
+    - cellbase-0.1.0.tgz
+    version: 0.1.0
+  hellojri:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-05T23:22:17.183844519+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 6cea733f62cb62ace300acd1b2b6809a695ef5831ffd4751d89a09eeeba9772f
+    name: hellojri
+    type: application
+    urls:
+    - hellojri-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-05-05T23:22:17.18281889+02:00"
