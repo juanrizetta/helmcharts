@@ -63,7 +63,7 @@ spec:
         - name: hellojri
           securityContext:
             {}
-          image: "gcr.io/google-samples/hello-app:2.0"
+          image: "gcr.io/google-samples/hello-app:1.0"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
