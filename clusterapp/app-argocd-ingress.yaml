@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  destination:
+    namespace: nginx
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: ingress-nginx
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: 4.1.0
+    helm:
+      values: |
+        controller:
+          replicaCount: 2
+          nodeSelector:
+            #  agentpool: agentpool
+          service:
+            annotations:
+              # Use a private endpoint instead of a public IP
+              #service.beta.kubernetes.io/azure-load-balancer-internal: true
+          defaultBackend:
+            nodeSelector:
+            #  agentpool: agentpool
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+      # Values file as block file
